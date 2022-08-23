@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bfff40e0-4bf1-4f93-8ed6-b46a13039ead" name="Changes" comment="initialised repo">
+    <list default="true" id="bfff40e0-4bf1-4f93-8ed6-b46a13039ead" name="Changes" comment="setting up component interactions, user import/export working">
+      <change afterPath="$PROJECT_DIR$/src/Admin/Admin.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Admin.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CanSignIn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaces/CanSignIn.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/User/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UserExporter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/User/UserExporter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UserImporter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/User/UserImporter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UserRegistry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/User/UserRegistry.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +75,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661266424026</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="setting up component interactions, user import/export working">
+      <created>1661271654129</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1661271654129</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -84,6 +98,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initialised repo" />
-    <option name="LAST_COMMIT_MESSAGE" value="initialised repo" />
+    <MESSAGE value="setting up component interactions, user import/export working" />
+    <option name="LAST_COMMIT_MESSAGE" value="setting up component interactions, user import/export working" />
   </component>
 </project>

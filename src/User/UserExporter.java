@@ -1,3 +1,5 @@
+package User;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -7,8 +9,6 @@ public class UserExporter implements User.Exporter {
     private String exportingName;
     private String exportingPassword;
     private final Map<String, String> exportingData = new HashMap<>();
-
-//    public UserExporter() {};
 
     public void storeId(double id) { this.exportingId = id; }
 

@@ -1,3 +1,5 @@
+package User;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,7 +16,6 @@ public class UserRegistry {
         registeredUsers.add(newUser);
     }
 
-//    to check the user exporter is working
     public void listUsers() {
         UserExporter exporter = new UserExporter();
         for (User user : registeredUsers) {

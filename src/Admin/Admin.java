@@ -1,21 +1,21 @@
-import java.util.ArrayList;
-import java.util.List;
+package Admin;
 
-public class User implements CanSignIn {
+import Interfaces.CanSignIn;
+
+public class Admin implements CanSignIn {
 
     private double id;
     private String name;
     private String password;
-    private List<String> checkedOutBookIds = new ArrayList<>();
 
-    public User() {}
+    public Admin() {}
 
     interface Importer {
         double fetchId();
         String fetchName();
         String fetchPassword();
     }
-    public User(Importer source) {
+    public Admin(Importer source) {
         id = source.fetchId();
         name = source.fetchName();
         password = source.fetchPassword();
@@ -36,10 +36,7 @@ public class User implements CanSignIn {
     public void signIn() { delegate.signIn(); }
     public void signOut() { delegate.signOut(); }
 
-    public void checkOutBook() {
-        System.out.println("uses interface");
-    }
-    public void returnBook() {
+    public void getReport() {
         System.out.println("uses interface");
     }
 }

@@ -1,10 +1,12 @@
-public class UserImporter implements User.Importer {
+package Admin;
 
-    private double importingId;
-    private String importingName;
-    private String importingPassword;
+public class AdminImporter implements Admin.Importer {
 
-    public UserImporter(double id, String name, String password) {
+    private final double importingId;
+    private final String importingName;
+    private final String importingPassword;
+
+    public AdminImporter(double id, String name, String password) {
         this.importingId = id;
         this.importingName = name;
         this.importingPassword = password;
