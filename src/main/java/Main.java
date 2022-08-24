@@ -1,12 +1,11 @@
 import Admin.AdminRegistry;
 import Book.BookRegistry;
-import Commands.CsvToJsonConverter;
+import Commands.SignInHandler;
+import Commands.UserInput;
+import Utilities.CsvToJsonConverter;
 import User.UserRegistry;
 
 import java.io.File;
-import java.io.FileNotFoundException;
-import java.net.URL;
-import java.nio.file.Paths;
 
 // notes
 // admin and user importer should autogenerate ids, not take as arguments
@@ -49,7 +48,14 @@ public class Main {
         BookRegistry bookRegistry = new BookRegistry(newFile);
 
         bookRegistry.compileLibrary();
-        bookRegistry.listBooks();
+//        bookRegistry.listBooks();
+
+        // ------------
+
+        UserInput userInput = new UserInput();
+        SignInHandler signInHandler = new SignInHandler(userInput);
+
+        signInHandler.runMenu();
 
     }
 }
