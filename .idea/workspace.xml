@@ -4,23 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bfff40e0-4bf1-4f93-8ed6-b46a13039ead" name="Changes" comment="admin import/export working">
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="bfff40e0-4bf1-4f93-8ed6-b46a13039ead" name="Changes" comment="maven added, convert csv datafile to json">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library_registry.iml" beforeDir="false" afterPath="$PROJECT_DIR$/library_registry.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Admin/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Admin/Admin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Admin/AdminExporter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Admin/AdminExporter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Admin/AdminImporter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Admin/AdminImporter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Admin/AdminRegistry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Admin/AdminRegistry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Book/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Interfaces/CanSignIn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Interfaces/CanSignIn.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/User/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/User/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/User/UserExporter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/User/UserExporter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/User/UserImporter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/User/UserImporter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/User/UserRegistry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/User/UserRegistry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Book/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Book/Book.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +85,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661274977376</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="maven added, convert csv datafile to json">
+      <created>1661359960290</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1661359960291</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -117,6 +110,7 @@
     <MESSAGE value="initialised repo" />
     <MESSAGE value="setting up component interactions, user import/export working" />
     <MESSAGE value="admin import/export working" />
-    <option name="LAST_COMMIT_MESSAGE" value="admin import/export working" />
+    <MESSAGE value="maven added, convert csv datafile to json" />
+    <option name="LAST_COMMIT_MESSAGE" value="maven added, convert csv datafile to json" />
   </component>
 </project>
