@@ -1,16 +1,31 @@
 package Book;
 
+import Commands.JsonToBookListCompiler;
+
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
 public class BookRegistry {
 
-    private final List<Book> library = new ArrayList<>();
+    private List<Book> library = new ArrayList<>();
+    private final File dataFile;
 
-    public BookRegistry() {}
+    public BookRegistry(File dataFile) {
+        this.dataFile = dataFile;
+    }
 
     public void compileLibrary() {
-        System.out.println("read dataset, add to list");
+        JsonToBookListCompiler compiler = new JsonToBookListCompiler(dataFile);
+        library = compiler.compile();
+    }
+
+    public void listBooks() {
+        BookJsonExporter exporter = new BookJsonExporter();
+        for (Book book : library) {
+            book.export(exporter);
+            System.out.println(exporter.exportData());
+        }
     }
 
     public Book findBook(double id) {

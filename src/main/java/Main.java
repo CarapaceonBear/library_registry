@@ -1,4 +1,5 @@
 import Admin.AdminRegistry;
+import Book.BookRegistry;
 import Commands.CsvToJsonConverter;
 import User.UserRegistry;
 
@@ -42,6 +43,13 @@ public class Main {
 
         CsvToJsonConverter converter = new CsvToJsonConverter(originalFile, newFile);
         converter.convert();
+
+        // ------------
+
+        BookRegistry bookRegistry = new BookRegistry(newFile);
+
+        bookRegistry.compileLibrary();
+        bookRegistry.listBooks();
 
     }
 }
