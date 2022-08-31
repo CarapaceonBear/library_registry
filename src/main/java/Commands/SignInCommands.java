@@ -70,15 +70,15 @@ public class SignInCommands implements MenuPrintOptions {
             Map<String, String> signedInUser = foundAdmin.get();
             SignedInUser.setName(signedInUser.get("name"));
             SignedInUser.setAdminPrivilege(true);
-            userInput.printMessage(String.format("Signed in as %s", signedInUser.get("name")));
+            userInput.printMessage(String.format("Signed in as %s\n", signedInUser.get("name")));
             nextMenu();
         } else if (foundUser.isPresent()) {
             Map<String, String> signedInUser = foundUser.get();
             SignedInUser.setName(signedInUser.get("name"));
-            userInput.printMessage(String.format("Signed in as %s", signedInUser.get("name")));
+            userInput.printMessage(String.format("Signed in as %s\n", signedInUser.get("name")));
             nextMenu();
         } else {
-            userInput.printMessage("User not found");
+            userInput.printMessage("User not found\n");
         }
     }
 

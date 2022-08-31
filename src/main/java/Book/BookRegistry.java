@@ -1,12 +1,15 @@
 package Book;
 
 import Utilities.JsonToBookListCompiler;
+import org.json.JSONObject;
 
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
+import java.util.stream.Collectors;
 
-public class BookRegistry {
+public class BookRegistry implements BookRegistrySearch {
 
     private List<Book> library = new ArrayList<>();
     private final File dataFile;
@@ -20,16 +23,28 @@ public class BookRegistry {
         library = compiler.compile();
     }
 
-    public void listBooks() {
-        BookJsonExporter exporter = new BookJsonExporter();
+    private List<JSONObject> listBooks() {
+        List<JSONObject> exportedBooks = new ArrayList<>();
         for (Book book : library) {
+            BookJsonExporter exporter = new BookJsonExporter();
             book.export(exporter);
-            System.out.println(exporter.exportData());
+            exportedBooks.add(exporter.exportData());
         }
+        return exportedBooks;
     }
 
-    public Book findBook(double id) {
-        System.out.println("need to search each book, exporting one by one");
-        return new Book();
+    public Optional<JSONObject> findBook(String id) {
+        List<JSONObject> bookList = listBooks();
+        return bookList.stream().filter(
+                b -> b.getString("Number").equals(id))
+                .findFirst();
+    }
+
+    public List<JSONObject> searchBooks(String searchTerm) {
+        List<JSONObject> bookList = listBooks();
+        return bookList.stream().filter(
+                b -> b.getString("Title").toLowerCase().contains(searchTerm.toLowerCase())
+                        || b.getString("Author").toLowerCase().contains(searchTerm.toLowerCase()))
+                .collect(Collectors.toList());
     }
 }

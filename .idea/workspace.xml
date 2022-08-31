@@ -4,24 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bfff40e0-4bf1-4f93-8ed6-b46a13039ead" name="Changes" comment="environment and dependencies set up outside of main">
+    <list default="true" id="bfff40e0-4bf1-4f93-8ed6-b46a13039ead" name="Changes" comment="refactoring, user registration, simple id generation">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Admin/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Admin/Admin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Admin/AdminRegistry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Admin/AdminRegistry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Commands/SignInHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Commands/SignInCommands.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Book/BookRegistry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Book/BookRegistry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Commands/SignInCommands.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Commands/SignInCommands.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Commands/UserCommands.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Commands/UserCommands.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/EnvironmentSetup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/EnvironmentSetup.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Interfaces/CanSignIn.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/User/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/User/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/User/UserRegistry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/User/UserRegistry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Utilities/SignedInUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Utilities/SignedInUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Admin/AdminRegistry.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Admin/AdminRegistry.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Commands/SignInHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Interfaces/AdminRegistrySearch.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Interfaces/UserRegistrySearch.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Admin/Admin.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Admin/Admin.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Commands/UserCommands.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Commands/UserCommands.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/EnvironmentSetup.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/EnvironmentSetup.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Interfaces/CanSignIn$Implementation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Interfaces/CanSignIn.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/User/UserRegistry.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/User/UserRegistry.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Utilities/SignedInUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Utilities/SignedInUser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/User/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/User/User.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,8 +27,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -149,7 +145,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661960099093</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="refactoring, user registration, simple id generation">
+      <created>1661965919692</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1661965919692</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -174,6 +177,7 @@
     <MESSAGE value="user search and sign in" />
     <MESSAGE value="admin search and sign in" />
     <MESSAGE value="environment and dependencies set up outside of main" />
-    <option name="LAST_COMMIT_MESSAGE" value="environment and dependencies set up outside of main" />
+    <MESSAGE value="refactoring, user registration, simple id generation" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactoring, user registration, simple id generation" />
   </component>
 </project>

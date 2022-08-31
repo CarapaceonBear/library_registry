@@ -5,6 +5,7 @@ import Commands.SignInCommands;
 import Commands.UserCommands;
 import Commands.UserInput;
 import User.UserRegistry;
+import Utilities.BookListPrinter;
 import Utilities.CsvToJsonConverter;
 import Utilities.IdGenerator;
 
@@ -31,7 +32,9 @@ public class EnvironmentSetup {
         BookRegistry bookRegistry = new BookRegistry(newFile);
 
         UserInput userInput = new UserInput();
-        UserCommands userCommands = new UserCommands(userInput);
+        BookListPrinter bookListPrinter = new BookListPrinter(userInput);
+        UserCommands userCommands = new UserCommands(userInput, bookListPrinter);
+        userCommands.addSearchers(bookRegistry);
         AdminCommands adminCommands = new AdminCommands(userInput);
         SignInCommands signInCommands = new SignInCommands(userInput, userCommands, adminCommands);
         signInCommands.addSearchers(userRegistry, adminRegistry);
