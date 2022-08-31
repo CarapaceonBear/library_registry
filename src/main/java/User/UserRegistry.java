@@ -1,7 +1,5 @@
 package User;
 
-import Interfaces.UserRegistrySearch;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;

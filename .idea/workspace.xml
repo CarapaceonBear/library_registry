@@ -4,16 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bfff40e0-4bf1-4f93-8ed6-b46a13039ead" name="Changes" comment="user search and sign in">
+    <list default="true" id="bfff40e0-4bf1-4f93-8ed6-b46a13039ead" name="Changes" comment="admin search and sign in">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Admin/AdminRegistry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Admin/AdminRegistry.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Commands/SignInHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Commands/SignInHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Interfaces/AdminRegistrySearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Admin/AdminRegistrySearch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Interfaces/UserRegistrySearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/User/UserRegistrySearch.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/User/UserRegistry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/User/UserRegistry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/User/UserSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Interfaces/UserRegistrySearch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Admin/AdminRegistry.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Admin/AdminRegistry.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/User/UserRegistry.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/User/UserRegistry.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,8 +21,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -127,7 +125,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661958160884</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="admin search and sign in">
+      <created>1661959409528</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1661959409528</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -150,6 +155,7 @@
     <MESSAGE value="book registry working, compiling list of books from file" />
     <MESSAGE value="user input and menu framework set up" />
     <MESSAGE value="user search and sign in" />
-    <option name="LAST_COMMIT_MESSAGE" value="user search and sign in" />
+    <MESSAGE value="admin search and sign in" />
+    <option name="LAST_COMMIT_MESSAGE" value="admin search and sign in" />
   </component>
 </project>

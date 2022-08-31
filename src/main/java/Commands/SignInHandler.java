@@ -1,8 +1,8 @@
 package Commands;
 
-import Interfaces.AdminRegistrySearch;
+import Admin.AdminRegistrySearch;
 import Interfaces.MenuPrintOptions;
-import Interfaces.UserRegistrySearch;
+import User.UserRegistrySearch;
 import Utilities.SignedInUser;
 
 import java.util.HashMap;
