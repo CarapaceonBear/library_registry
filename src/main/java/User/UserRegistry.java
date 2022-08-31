@@ -1,21 +1,30 @@
 package User;
 
+import Utilities.IdGenerator;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
-public class UserRegistry implements UserRegistrySearch {
+public class UserRegistry implements UserRegistrySearch, UserRegistryAddUser {
 
     private final List<User> registeredUsers = new ArrayList<>();
+    private final IdGenerator idGenerator;
 
-    public UserRegistry() {}
+    public UserRegistry(IdGenerator idGenerator) {
+        this.idGenerator = idGenerator;
+    }
 
-    public void createUser(double id, String name, String password) {
+    private void createUser(double id, String name, String password) {
         UserImporter importer = new UserImporter(id, name, password);
         User newUser = new User(importer);
 
         registeredUsers.add(newUser);
+    }
+
+    public void addUser(Map<String, String> user) {
+        createUser(idGenerator.generateNewId(), user.get("name"), user.get("password"));
     }
 
     private List<Map<String, String>> listUsers() {

@@ -1,8 +1,6 @@
 package Admin;
 
-import Interfaces.CanSignIn;
-
-public class Admin implements CanSignIn {
+public class Admin {
 
     private double id;
     private String name;
@@ -31,10 +29,6 @@ public class Admin implements CanSignIn {
         destination.storeName(name);
         destination.storePassword(password);
     }
-
-    private final CanSignIn delegate = new CanSignIn.Implementation();
-    public void signIn() { delegate.signIn(); }
-    public void signOut() { delegate.signOut(); }
 
     public void getReport() {
         System.out.println("uses interface");

@@ -4,14 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bfff40e0-4bf1-4f93-8ed6-b46a13039ead" name="Changes" comment="admin search and sign in">
+    <list default="true" id="bfff40e0-4bf1-4f93-8ed6-b46a13039ead" name="Changes" comment="environment and dependencies set up outside of main">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Admin/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Admin/Admin.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Admin/AdminRegistry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Admin/AdminRegistry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Commands/SignInHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Commands/SignInHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Interfaces/AdminRegistrySearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Admin/AdminRegistrySearch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Interfaces/UserRegistrySearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/User/UserRegistrySearch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Commands/SignInHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Commands/SignInCommands.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/EnvironmentSetup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/EnvironmentSetup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Interfaces/CanSignIn.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/User/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/User/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/User/UserRegistry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/User/UserRegistry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Utilities/SignedInUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Utilities/SignedInUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Admin/AdminRegistry.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Admin/AdminRegistry.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Commands/SignInHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Interfaces/AdminRegistrySearch.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Interfaces/UserRegistrySearch.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/User/UserRegistry.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/User/UserRegistry.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Utilities/SignedInUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Utilities/SignedInUser.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,8 +31,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -132,7 +142,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661959409528</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="environment and dependencies set up outside of main">
+      <created>1661960099093</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1661960099093</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -156,6 +173,7 @@
     <MESSAGE value="user input and menu framework set up" />
     <MESSAGE value="user search and sign in" />
     <MESSAGE value="admin search and sign in" />
-    <option name="LAST_COMMIT_MESSAGE" value="admin search and sign in" />
+    <MESSAGE value="environment and dependencies set up outside of main" />
+    <option name="LAST_COMMIT_MESSAGE" value="environment and dependencies set up outside of main" />
   </component>
 </project>

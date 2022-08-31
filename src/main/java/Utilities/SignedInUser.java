@@ -13,11 +13,11 @@ public class SignedInUser {
         return name;
     }
 
-    public static void setAdminPriviledge(boolean value) {
+    public static void setAdminPrivilege(boolean value) {
         admin = value;
     }
 
-    public static boolean getAdminPriviledge() {
+    public static boolean checkIfAdmin() {
         return admin;
     }
 }

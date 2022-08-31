@@ -1,21 +1,30 @@
 package Admin;
 
+import Utilities.IdGenerator;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
-public class AdminRegistry implements AdminRegistrySearch {
+public class AdminRegistry implements AdminRegistrySearch, AdminRegistryAddAdmin {
 
     private final List<Admin> registeredAdmins = new ArrayList<>();
+    private final IdGenerator idGenerator;
 
-    public AdminRegistry() {}
+    public AdminRegistry(IdGenerator idGenerator) {
+        this.idGenerator = idGenerator;
+    }
 
-    public void createAdmin(double id, String name, String password) {
+    private void createAdmin(double id, String name, String password) {
         AdminImporter importer = new AdminImporter(id, name, password);
         Admin newAdmin = new Admin(importer);
 
         registeredAdmins.add(newAdmin);
+    }
+
+    public void addAdmin(Map<String, String> admin) {
+        createAdmin(idGenerator.generateNewId(), admin.get("name"), admin.get("password"));
     }
 
     private List<Map<String, String>> listAdmins() {

@@ -1,11 +1,16 @@
 import Admin.AdminRegistry;
 import Book.BookRegistry;
-import Commands.SignInHandler;
+import Commands.AdminCommands;
+import Commands.SignInCommands;
+import Commands.UserCommands;
 import Commands.UserInput;
 import User.UserRegistry;
 import Utilities.CsvToJsonConverter;
+import Utilities.IdGenerator;
 
 import java.io.File;
+import java.util.HashMap;
+import java.util.Map;
 
 public class EnvironmentSetup {
 
@@ -20,26 +25,45 @@ public class EnvironmentSetup {
 
         // -----------
 
-        UserRegistry userRegistry = new UserRegistry();
-        AdminRegistry adminRegistry = new AdminRegistry();
+        IdGenerator idGenerator = new IdGenerator();
+        UserRegistry userRegistry = new UserRegistry(idGenerator);
+        AdminRegistry adminRegistry = new AdminRegistry(idGenerator);
         BookRegistry bookRegistry = new BookRegistry(newFile);
 
         UserInput userInput = new UserInput();
-        SignInHandler signInHandler = new SignInHandler(userInput);
-        signInHandler.addSearchers(userRegistry, adminRegistry);
+        UserCommands userCommands = new UserCommands(userInput);
+        AdminCommands adminCommands = new AdminCommands(userInput);
+        SignInCommands signInCommands = new SignInCommands(userInput, userCommands, adminCommands);
+        signInCommands.addSearchers(userRegistry, adminRegistry);
+        signInCommands.addCreators(userRegistry);
 
         // -----------
 
         bookRegistry.compileLibrary();
 
     //    temporary users
-        userRegistry.createUser(10000, "Bob", "password");
-        userRegistry.createUser(10001, "Rick", "wordpass");
-        adminRegistry.createAdmin(20000, "Beth", "admin");
-        adminRegistry.createAdmin(20001, "Dave", "admin1");
+        Map<String, String> bob = new HashMap<>();
+        bob.put("name", "Bob");
+        bob.put("password", "password");
+        userRegistry.addUser(bob);
+
+        Map<String, String> rick = new HashMap<>();
+        rick.put("name", "Rick");
+        rick.put("password", "wordpass");
+        userRegistry.addUser(rick);
+
+        Map<String, String> beth = new HashMap<>();
+        beth.put("name", "Beth");
+        beth.put("password", "admin");
+        adminRegistry.addAdmin(beth);
+
+        Map<String, String> dave = new HashMap<>();
+        dave.put("name", "Dave");
+        dave.put("password", "admin1");
+        adminRegistry.addAdmin(dave);
 
         // -----------
 
-        signInHandler.runMenu();
+        signInCommands.runMenu();
     }
 }

@@ -1,10 +1,9 @@
 package User;
 
-import Interfaces.CanSignIn;
 import java.util.ArrayList;
 import java.util.List;
 
-public class User implements CanSignIn {
+public class User {
 
     private double id;
     private String name;
@@ -34,10 +33,6 @@ public class User implements CanSignIn {
         destination.storeName(name);
         destination.storePassword(password);
     }
-
-    private final CanSignIn delegate = new CanSignIn.Implementation();
-    public void signIn() { delegate.signIn(); }
-    public void signOut() { delegate.signOut(); }
 
     public void checkOutBook() {
         System.out.println("uses interface");
