@@ -1,7 +1,5 @@
 package Commands;
 
-import Interfaces.MenuPrintOptions;
-
 public class AdminCommands implements MenuPrintOptions {
 
     private final UserInput userInput;

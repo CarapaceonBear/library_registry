@@ -33,7 +33,7 @@ public class BookRegistry implements BookRegistrySearch {
         return exportedBooks;
     }
 
-    public Optional<JSONObject> findBook(String id) {
+    public Optional<JSONObject> findBookById(String id) {
         List<JSONObject> bookList = listBooks();
         return bookList.stream().filter(
                 b -> b.getString("Number").equals(id))

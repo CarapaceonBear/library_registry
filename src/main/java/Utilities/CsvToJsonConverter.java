@@ -13,15 +13,18 @@ public class CsvToJsonConverter {
 
     private final File originalFile;
     private final File newFile;
+    private final File originalFileModified;
 
-    public CsvToJsonConverter(File originalFile, File newFile) {
+    public CsvToJsonConverter(File originalFile, File newFile, File originalFileModified) {
         this.originalFile = originalFile;
         this.newFile = newFile;
+        this.originalFileModified = originalFileModified;
     }
 
     public void convert() {
+        prepareCsvKeys(originalFile, originalFileModified);
         if (createNewFile(newFile)) {
-            String csv = readFileToString(originalFile);
+            String csv = readFileToString(originalFileModified);
             JSONArray jsonArray = createJsonArray(csv);
             writeToFile(newFile, jsonArray);
         } else {
@@ -29,10 +32,10 @@ public class CsvToJsonConverter {
         }
     }
 
-    private String readFileToString(File originalFile) {
+    private String readFileToString(File file) {
         Scanner fileReader = null;
         try {
-            fileReader = new Scanner(originalFile);
+            fileReader = new Scanner(file);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
@@ -70,54 +73,33 @@ public class CsvToJsonConverter {
         }
     }
 
-
-
-
-
-
-
-
-//    public void convert() throws FileNotFoundException {
-//        Scanner fileReader = new Scanner(originalFile);
-//        boolean isFirstLine = true;
-//        List<String> keys = new ArrayList<>();
-//        JSONArray jsonArray = new JSONArray();
-//
-//        while (fileReader.hasNextLine()) {
-//            JSONObject jsonObject = new JSONObject();
-//            String data = fileReader.nextLine();
-//            if (isFirstLine) {
-//                String[] firstLine = data.split(",");
-//                keys.addAll(Arrays.asList(firstLine));
-//                isFirstLine = false;
-//            } else {
-//                String[] currentLine = data.split(",");
-//                List<String> values = new ArrayList<>(Arrays.asList(currentLine));
-//                for (int i = 0; i < values.size(); i++) {
-//                    if (values.get(i).charAt(0) == '\"') {
-//                        String combined = values.get(i) + ", " + values.get(i + 1);
-//                        values.set(i, combined);
-//                        values.remove(i + 1);
-//                    }
-//                }
-//                for (int i = 0; i < values.size(); i++) {
-//                    jsonObject.put(keys.get(i), values.get(i));
-//                }
-//                jsonArray.put(jsonObject);
-//            }
-//        }
-//        fileReader.close();
-//
-//        for (Object object : jsonArray) {
-//            System.out.println(object);
-//        }
-//
-//        try {
-//            newFile.createNewFile();
-//        } catch (IOException e) {
-//            throw new RuntimeException(e);
-//        }
-//    }
-
+    private void prepareCsvKeys(File file, File fileCopy) {
+        Scanner fileReader = null;
+        try {
+            fileReader = new Scanner(file);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        String dataStream = "";
+        int count = 0;
+        while (fileReader.hasNextLine()) {
+            if (count == 0) {
+                dataStream += "Number,Title,Author,Genre,SubGenre,Publisher,TimesLoaned,IsOnLoan\n";
+                fileReader.nextLine();
+                count++;
+            } else {
+                String data = fileReader.nextLine();
+                dataStream += data + ",0,false\n";
+            }
+        }
+        fileReader.close();
+        try {
+            FileWriter fileWriter = new FileWriter(fileCopy);
+            fileWriter.write(dataStream);
+            fileWriter.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
 }

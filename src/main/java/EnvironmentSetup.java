@@ -20,9 +20,11 @@ public class EnvironmentSetup {
         File root = new File("/Actual Documents/NologyCourse/library_registry");
         File originalFile = new File(root, "data/books_data.csv");
         File newFile = new File(root, "data/books_data.json");
-
-        CsvToJsonConverter converter = new CsvToJsonConverter(originalFile, newFile);
-        converter.convert();
+        File originalFileModified = new File(root, "data/books_data_modified.csv");
+        if (! newFile.exists()) {
+            CsvToJsonConverter converter = new CsvToJsonConverter(originalFile, newFile, originalFileModified);
+            converter.convert();
+        }
 
         // -----------
 

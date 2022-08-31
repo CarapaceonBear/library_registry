@@ -1,7 +1,6 @@
 package Commands;
 
 import Book.BookRegistrySearch;
-import Interfaces.MenuPrintOptions;
 import Utilities.BookListPrinter;
 import org.json.JSONObject;
 
@@ -47,7 +46,7 @@ public class UserCommands implements MenuPrintOptions {
                     break;
                 case 2:
                     String id = userInput.getStringInput("Enter the id of the book:");
-                    Optional<JSONObject> result = bookSearch.findBook(id);
+                    Optional<JSONObject> result = bookSearch.findBookById(id);
                     if (result.isPresent()) {
                         printer.printFullData(result.get());
                     } else {

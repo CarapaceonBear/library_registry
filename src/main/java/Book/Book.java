@@ -8,6 +8,8 @@ public class Book {
     private String genre;
     private String subGenre;
     private String publisher;
+    private int timesLoaned = 0;
+    private boolean isOnLoan = false;
 
     public Book() {}
 
@@ -18,6 +20,8 @@ public class Book {
         String fetchGenre();
         String fetchSubGenre();
         String fetchPublisher();
+        int fetchTimesLoaned();
+        boolean fetchIsOnLoan();
     }
     public Book(Importer source) {
         number = source.fetchNumber();
@@ -26,6 +30,8 @@ public class Book {
         genre = source.fetchGenre();
         subGenre = source.fetchSubGenre();
         publisher = source.fetchPublisher();
+        timesLoaned = source.fetchTimesLoaned();
+        isOnLoan = source.fetchIsOnLoan();
     }
 
     interface Exporter {
@@ -35,6 +41,8 @@ public class Book {
         void storeGenre(String genre);
         void storeSubGenre(String subGenre);
         void storePublisher(String publisher);
+        void storeTimesLoaned(int timesLoaned);
+        void storeIsOnLoan(boolean isOnLoan);
     }
     public void export(Exporter destination) {
         destination.storeNumber(number);
@@ -43,6 +51,8 @@ public class Book {
         destination.storeGenre(genre);
         destination.storeSubGenre(subGenre);
         destination.storePublisher(publisher);
+        destination.storeTimesLoaned(timesLoaned);
+        destination.storeIsOnLoan(isOnLoan);
     }
 
 

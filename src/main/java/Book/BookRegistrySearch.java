@@ -7,5 +7,5 @@ import java.util.Optional;
 
 public interface BookRegistrySearch {
     List<JSONObject> searchBooks(String searchTerm);
-    Optional<JSONObject> findBook(String id);
+    Optional<JSONObject> findBookById(String id);
 }

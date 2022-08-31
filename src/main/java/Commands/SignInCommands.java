@@ -1,9 +1,6 @@
 package Commands;
 
-import Admin.AdminRegistry;
 import Admin.AdminRegistrySearch;
-import Interfaces.MenuPrintOptions;
-import User.UserRegistry;
 import User.UserRegistryAddUser;
 import User.UserRegistrySearch;
 import Utilities.SignedInUser;

@@ -1,6 +1,4 @@
-package Interfaces;
-
-import Commands.UserInput;
+package Commands;
 
 public interface MenuPrintOptions {
 

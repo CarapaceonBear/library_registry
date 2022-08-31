@@ -10,6 +10,8 @@ public class BookJsonExporter implements Book.Exporter {
     private String exportingGenre;
     private String exportingSubGenre;
     private String exportingPublisher;
+    private String exportingTimesLoaned;
+    private String exportingIsOnLoan;
     private final JSONObject exportingData = new JSONObject();
 
     public void storeNumber(String number) { this.exportingNumber = number; }
@@ -24,6 +26,10 @@ public class BookJsonExporter implements Book.Exporter {
 
     public void storePublisher(String publisher) { this.exportingPublisher = publisher; }
 
+    public void storeTimesLoaned(int timesLoaned) { this.exportingTimesLoaned = Integer.toString(timesLoaned); }
+
+    public void storeIsOnLoan(boolean isOnLoan) { this.exportingIsOnLoan = Boolean.toString(isOnLoan); }
+
     public JSONObject exportData() {
         exportingData.put("Number", exportingNumber);
         exportingData.put("Title", exportingTitle);
@@ -31,6 +37,8 @@ public class BookJsonExporter implements Book.Exporter {
         exportingData.put("Genre", exportingGenre);
         exportingData.put("SubGenre", exportingSubGenre);
         exportingData.put("Publisher", exportingPublisher);
+        exportingData.put("TimesLoaned", exportingTimesLoaned);
+        exportingData.put("IsOnLoan", exportingIsOnLoan);
         return exportingData;
     }
 }

@@ -4,20 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bfff40e0-4bf1-4f93-8ed6-b46a13039ead" name="Changes" comment="refactoring, user registration, simple id generation">
+    <list default="true" id="bfff40e0-4bf1-4f93-8ed6-b46a13039ead" name="Changes" comment="book searching, by search term or id">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/books_data.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/books_data.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Book/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Book/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Book/BookJsonExporter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Book/BookJsonExporter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Book/BookJsonImporter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Book/BookJsonImporter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Book/BookRegistry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Book/BookRegistry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Book/BookRegistrySearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Book/BookRegistrySearch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Commands/AdminCommands.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Commands/AdminCommands.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Commands/SignInCommands.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Commands/SignInCommands.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Commands/UserCommands.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Commands/UserCommands.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/EnvironmentSetup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/EnvironmentSetup.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Admin/Admin.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Admin/Admin.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Interfaces/MenuPrintOptions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Commands/MenuPrintOptions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Utilities/BookListPrinter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Utilities/BookListPrinter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Utilities/CsvToJsonConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Utilities/CsvToJsonConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Book/BookRegistry.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Book/BookRegistry.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Commands/AdminCommands.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Commands/AdminCommands.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Commands/SignInCommands.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Commands/SignInCommands.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Commands/UserCommands.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Commands/UserCommands.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/EnvironmentSetup.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/EnvironmentSetup.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Interfaces/CanSignIn$Implementation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Interfaces/CanSignIn.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/User/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/User/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Interfaces/MenuPrintOptions$Implementation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Interfaces/MenuPrintOptions.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Utilities/CsvToJsonConverter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Utilities/CsvToJsonConverter.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,7 +161,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661965919692</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="book searching, by search term or id">
+      <created>1661971000002</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1661971000002</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -178,6 +194,7 @@
     <MESSAGE value="admin search and sign in" />
     <MESSAGE value="environment and dependencies set up outside of main" />
     <MESSAGE value="refactoring, user registration, simple id generation" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactoring, user registration, simple id generation" />
+    <MESSAGE value="book searching, by search term or id" />
+    <option name="LAST_COMMIT_MESSAGE" value="book searching, by search term or id" />
   </component>
 </project>
