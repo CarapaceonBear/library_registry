@@ -4,16 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bfff40e0-4bf1-4f93-8ed6-b46a13039ead" name="Changes" comment="book registry working, compiling list of books from file">
+    <list default="true" id="bfff40e0-4bf1-4f93-8ed6-b46a13039ead" name="Changes" comment="user input and menu framework set up">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Book/BookRegistry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Book/BookRegistry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Commands/CsvToJsonConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Utilities/CsvToJsonConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Commands/JsonToBookListCompiler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Utilities/JsonToBookListCompiler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Admin/AdminRegistry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Admin/AdminRegistry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Commands/SignInHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Commands/SignInHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Book/BookRegistry.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Book/BookRegistry.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Commands/CsvToJsonConverter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Commands/JsonToBookListCompiler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/User/UserRegistry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/User/UserRegistry.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,8 +19,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -113,7 +109,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661380505082</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="user input and menu framework set up">
+      <created>1661383434532</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1661383434532</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -134,6 +137,7 @@
     <MESSAGE value="maven added, convert csv datafile to json" />
     <MESSAGE value="book importer and exporter for json objects" />
     <MESSAGE value="book registry working, compiling list of books from file" />
-    <option name="LAST_COMMIT_MESSAGE" value="book registry working, compiling list of books from file" />
+    <MESSAGE value="user input and menu framework set up" />
+    <option name="LAST_COMMIT_MESSAGE" value="user input and menu framework set up" />
   </component>
 </project>

@@ -32,7 +32,7 @@ public class Main {
         adminRegistry.createAdmin(20000, "Beth", "admin");
         adminRegistry.createAdmin(20001, "Dave", "admin1");
 
-        userRegistry.listUsers();
+//        userRegistry.listUsers();
         adminRegistry.listAdmins();
 
         // ------------
@@ -54,6 +54,7 @@ public class Main {
 
         UserInput userInput = new UserInput();
         SignInHandler signInHandler = new SignInHandler(userInput);
+        signInHandler.addSearcher(userRegistry);
 
         signInHandler.runMenu();
 
