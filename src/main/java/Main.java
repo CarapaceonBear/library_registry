@@ -33,7 +33,7 @@ public class Main {
         adminRegistry.createAdmin(20001, "Dave", "admin1");
 
 //        userRegistry.listUsers();
-        adminRegistry.listAdmins();
+//        adminRegistry.listAdmins();
 
         // ------------
 
@@ -54,7 +54,7 @@ public class Main {
 
         UserInput userInput = new UserInput();
         SignInHandler signInHandler = new SignInHandler(userInput);
-        signInHandler.addSearcher(userRegistry);
+        signInHandler.addSearchers(userRegistry, adminRegistry);
 
         signInHandler.runMenu();
 

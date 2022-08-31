@@ -1,11 +1,13 @@
 package User;
 
+import Interfaces.UserRegistrySearch;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
-public class UserRegistry implements UserSearch {
+public class UserRegistry implements UserRegistrySearch {
 
     private final List<User> registeredUsers = new ArrayList<>();
 
@@ -35,5 +37,4 @@ public class UserRegistry implements UserSearch {
                         && u.get("password").equals(userQuery.get("password")))
                 .findFirst();
     }
-
 }

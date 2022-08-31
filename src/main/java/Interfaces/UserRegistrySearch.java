@@ -1,8 +1,8 @@
-package User;
+package Interfaces;
 
 import java.util.Map;
 import java.util.Optional;
 
-public interface UserSearch {
+public interface UserRegistrySearch {
     Optional<Map<String, String>> searchUsers(Map<String, String> user);
 }
