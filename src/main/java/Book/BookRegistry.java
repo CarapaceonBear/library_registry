@@ -54,6 +54,6 @@ public class BookRegistry implements BookRegistrySearch, BookRegistryLoan {
     }
 
     public String returnBook(String id) {
-        return ("return");
+        return loaner.returnBook(library, id);
     }
 }

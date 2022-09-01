@@ -4,16 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bfff40e0-4bf1-4f93-8ed6-b46a13039ead" name="Changes" comment="book updated with timesLoaned and isOnLoan">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="bfff40e0-4bf1-4f93-8ed6-b46a13039ead" name="Changes" comment="books can be checked out">
+      <change beforePath="$PROJECT_DIR$/src/main/java/Book/BookLoaner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Book/BookLoaner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Book/BookRegistry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Book/BookRegistry.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Commands/UserCommands.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Commands/UserCommands.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/EnvironmentSetup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/EnvironmentSetup.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Book/Book$Exporter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Book/Book$Exporter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Book/Book$Importer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Book/Book$Importer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Book/Book.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Book/Book.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Book/BookJsonExporter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Book/BookJsonExporter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Book/BookJsonImporter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Book/BookJsonImporter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Book/BookRegistry.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Book/BookRegistry.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Commands/UserCommands.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Commands/UserCommands.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/EnvironmentSetup.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/EnvironmentSetup.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -162,7 +160,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661989108671</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="books can be checked out">
+      <created>1662038404572</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1662038404572</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -190,6 +195,7 @@
     <MESSAGE value="refactoring, user registration, simple id generation" />
     <MESSAGE value="book searching, by search term or id" />
     <MESSAGE value="book updated with timesLoaned and isOnLoan" />
-    <option name="LAST_COMMIT_MESSAGE" value="book updated with timesLoaned and isOnLoan" />
+    <MESSAGE value="books can be checked out" />
+    <option name="LAST_COMMIT_MESSAGE" value="books can be checked out" />
   </component>
 </project>

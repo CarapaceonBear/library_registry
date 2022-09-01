@@ -69,7 +69,13 @@ public class UserCommands implements MenuPrintOptions {
                     }
                     break;
                 case 4:
-                    userInput.printMessage("return");
+                    String returnId = userInput.getStringInput("Enter the id of the book to return:");
+                    Optional<JSONObject> returnedBook = bookSearch.findBookById(returnId);
+                    if (returnedBook.isPresent()) {
+                        userInput.printMessage(bookLoaner.returnBook(returnId));
+                    } else {
+                        userInput.printMessage("Book with given id not found\n");
+                    }
                     break;
                 default:
                     isActive = false;

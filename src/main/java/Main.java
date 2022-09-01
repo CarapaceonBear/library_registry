@@ -19,6 +19,8 @@
 // Admin x
 // BookRegistry x
 // BookRegistrySearch x
+// BookRegistryLoan x
+// BookLoaner x
 // BookJsonImporter x
 // BookJsonExporter x
 // Book x
@@ -33,6 +35,10 @@
 // JsonToBookListCompiler x
 // CsvToJsonConverter x
 // EnvironmentSetup x
+
+// to do:
+//  modify users book list when loaning
+//  update library file on shutdown
 
 public class Main {
     public static void main(String[] args) {
