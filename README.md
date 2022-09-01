@@ -13,4 +13,4 @@ mock backend for a library
 - I plan on using dependency inversion where possible, again reducing coupling as much as possible
 - I want to use interfaces for inheritance, to eliminate superclass fragility
 
-![components](https://i.imgur.com/SxwhkJi.png)
+![components](https://i.imgur.com/DksqMFB.png)
