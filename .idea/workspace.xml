@@ -4,29 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bfff40e0-4bf1-4f93-8ed6-b46a13039ead" name="Changes" comment="book searching, by search term or id">
+    <list default="true" id="bfff40e0-4bf1-4f93-8ed6-b46a13039ead" name="Changes" comment="book updated with timesLoaned and isOnLoan">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/books_data.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/books_data.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Book/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Book/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Book/BookJsonExporter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Book/BookJsonExporter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Book/BookJsonImporter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Book/BookJsonImporter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Book/BookRegistry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Book/BookRegistry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Book/BookRegistrySearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Book/BookRegistrySearch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Commands/AdminCommands.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Commands/AdminCommands.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Commands/SignInCommands.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Commands/SignInCommands.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Commands/UserCommands.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Commands/UserCommands.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/EnvironmentSetup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/EnvironmentSetup.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Interfaces/MenuPrintOptions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Commands/MenuPrintOptions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Utilities/BookListPrinter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Utilities/BookListPrinter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Utilities/CsvToJsonConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Utilities/CsvToJsonConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Book/BookRegistry.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Book/BookRegistry.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Commands/AdminCommands.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Commands/AdminCommands.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Commands/SignInCommands.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Commands/SignInCommands.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Commands/UserCommands.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Commands/UserCommands.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/EnvironmentSetup.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/EnvironmentSetup.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Interfaces/MenuPrintOptions$Implementation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Interfaces/MenuPrintOptions.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Utilities/CsvToJsonConverter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Utilities/CsvToJsonConverter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Book/Book$Exporter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Book/Book$Exporter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Book/Book$Importer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Book/Book$Importer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Book/Book.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Book/Book.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Book/BookJsonExporter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Book/BookJsonExporter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Book/BookJsonImporter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Book/BookJsonImporter.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -168,7 +155,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661971000002</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="book updated with timesLoaned and isOnLoan">
+      <created>1661989108671</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1661989108671</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -195,6 +189,7 @@
     <MESSAGE value="environment and dependencies set up outside of main" />
     <MESSAGE value="refactoring, user registration, simple id generation" />
     <MESSAGE value="book searching, by search term or id" />
-    <option name="LAST_COMMIT_MESSAGE" value="book searching, by search term or id" />
+    <MESSAGE value="book updated with timesLoaned and isOnLoan" />
+    <option name="LAST_COMMIT_MESSAGE" value="book updated with timesLoaned and isOnLoan" />
   </component>
 </project>

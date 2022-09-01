@@ -37,6 +37,7 @@ public class EnvironmentSetup {
         BookListPrinter bookListPrinter = new BookListPrinter(userInput);
         UserCommands userCommands = new UserCommands(userInput, bookListPrinter);
         userCommands.addSearchers(bookRegistry);
+        userCommands.addLoaner(bookRegistry);
         AdminCommands adminCommands = new AdminCommands(userInput);
         SignInCommands signInCommands = new SignInCommands(userInput, userCommands, adminCommands);
         signInCommands.addSearchers(userRegistry, adminRegistry);

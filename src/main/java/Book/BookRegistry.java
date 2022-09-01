@@ -9,10 +9,11 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
-public class BookRegistry implements BookRegistrySearch {
+public class BookRegistry implements BookRegistrySearch, BookRegistryLoan {
 
     private List<Book> library = new ArrayList<>();
     private final File dataFile;
+    private final BookLoaner loaner = new BookLoaner();
 
     public BookRegistry(File dataFile) {
         this.dataFile = dataFile;
@@ -46,5 +47,13 @@ public class BookRegistry implements BookRegistrySearch {
                 b -> b.getString("Title").toLowerCase().contains(searchTerm.toLowerCase())
                         || b.getString("Author").toLowerCase().contains(searchTerm.toLowerCase()))
                 .collect(Collectors.toList());
+    }
+
+    public String checkOutBook(String id) {
+        return loaner.checkOutBook(library, id);
+    }
+
+    public String returnBook(String id) {
+        return ("return");
     }
 }
