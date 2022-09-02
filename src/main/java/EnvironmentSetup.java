@@ -35,9 +35,9 @@ public class EnvironmentSetup {
 
         UserInput userInput = new UserInput();
         BookListPrinter bookListPrinter = new BookListPrinter(userInput);
-        UserCommands userCommands = new UserCommands(userInput, bookListPrinter);
-        userCommands.addSearchers(bookRegistry);
-        userCommands.addLoaner(bookRegistry);
+        UserCommands userCommands = new UserCommands(userInput, bookListPrinter, userRegistry);
+        userCommands.addSearchers(bookRegistry, userRegistry);
+        userCommands.addLoaner(bookRegistry, userRegistry);
         AdminCommands adminCommands = new AdminCommands(userInput);
         SignInCommands signInCommands = new SignInCommands(userInput, userCommands, adminCommands);
         signInCommands.addSearchers(userRegistry, adminRegistry);
@@ -70,6 +70,7 @@ public class EnvironmentSetup {
 
         // -----------
 
+        userRegistry.printUsers();
         signInCommands.runMenu();
     }
 }

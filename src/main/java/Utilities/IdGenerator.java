@@ -3,13 +3,13 @@ package Utilities;
 public class IdGenerator {
 //    very simple for now
 
-    private double id = 0;
+    private int id = 0;
 
     public IdGenerator() {}
 
-    public double generateNewId() {
-        double result = id;
+    public String generateNewId() {
+        int result = id;
         id++;
-        return result;
+        return Integer.toString(result);
     }
 }

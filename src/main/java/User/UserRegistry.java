@@ -7,17 +7,18 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
-public class UserRegistry implements UserRegistrySearch, UserRegistryAddUser {
+public class UserRegistry implements UserRegistrySearch, UserRegistryAddUser, UserRegistryUpdate {
 
     private final List<User> registeredUsers = new ArrayList<>();
     private final IdGenerator idGenerator;
+    private final UserUpdater userUpdater = new UserUpdater();
 
     public UserRegistry(IdGenerator idGenerator) {
         this.idGenerator = idGenerator;
     }
 
-    private void createUser(double id, String name, String password) {
-        UserImporter importer = new UserImporter(id, name, password);
+    private void createUser(String id, String name, String password) {
+        UserImporter importer = new UserImporter(id, name, password, "");
         User newUser = new User(importer);
 
         registeredUsers.add(newUser);
@@ -43,5 +44,24 @@ public class UserRegistry implements UserRegistrySearch, UserRegistryAddUser {
                 u -> u.get("name").equals(userQuery.get("name"))
                         && u.get("password").equals(userQuery.get("password")))
                 .findFirst();
+    }
+
+    public Optional<Map<String, String>> searchById(String id) {
+        List<Map<String, String>> userList = listUsers();
+        return userList.stream().filter(
+                u -> u.get("id").equals(id))
+                .findFirst();
+    }
+
+    public void updateUser(String id, Map<String, String> newDetails) {
+        userUpdater.updateUser(registeredUsers, id, newDetails);
+    }
+
+//    temporary
+    public void printUsers() {
+        List<Map<String, String>> test = listUsers();
+        for (Map<String, String> u : test) {
+            System.out.println(u);
+        }
     }
 }

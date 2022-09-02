@@ -2,11 +2,15 @@ package Commands;
 
 import Book.BookRegistryLoan;
 import Book.BookRegistrySearch;
+import User.UserRegistry;
+import User.UserRegistryUpdate;
+import User.UserUpdater;
+import User.UserRegistrySearch;
 import Utilities.BookListPrinter;
+import Utilities.SignedInUser;
 import org.json.JSONObject;
 
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
 public class UserCommands implements MenuPrintOptions {
 
@@ -14,20 +18,27 @@ public class UserCommands implements MenuPrintOptions {
     private final BookListPrinter printer;
     private final String[] menuOptions = {"Search for a book", "Get full details of a book", "Check out a book", "Return a book"};
     private BookRegistrySearch bookSearch;
+    private UserRegistrySearch userSearch;
     private BookRegistryLoan bookLoaner;
+    private UserRegistryUpdate userUpdater;
     private boolean isActive = true;
 
-    public UserCommands(UserInput input, BookListPrinter printer) {
+    private UserRegistry temporary;
+
+    public UserCommands(UserInput input, BookListPrinter printer, UserRegistry temporary) {
         this.userInput = input;
         this.printer = printer;
+        this.temporary = temporary;
     }
 
-    public void addSearchers(BookRegistrySearch bookSearch) {
+    public void addSearchers(BookRegistrySearch bookSearch, UserRegistrySearch userSearch) {
         this.bookSearch = bookSearch;
+        this.userSearch = userSearch;
     }
 
-    public void addLoaner(BookRegistryLoan bookLoaner) {
+    public void addLoaner(BookRegistryLoan bookLoaner, UserRegistryUpdate userUpdater) {
         this.bookLoaner = bookLoaner;
+        this.userUpdater = userUpdater;
     }
 
     private final MenuPrintOptions delegate = new MenuPrintOptions.Implementation();
@@ -64,6 +75,24 @@ public class UserCommands implements MenuPrintOptions {
                     Optional<JSONObject> checkedOutBook = bookSearch.findBookById(checkOutId);
                     if (checkedOutBook.isPresent()) {
                         userInput.printMessage(bookLoaner.checkOutBook(checkOutId));
+//                        need to refactor so we know here if the book is on loan already
+                        Optional<Map<String, String>> currentUser = userSearch.searchById(SignedInUser.getId());
+
+                        if (currentUser.isPresent()) {
+                            Map<String, String> foundUser = currentUser.get();
+                            List<String> currentBookList = new ArrayList<>(Arrays.asList(foundUser.get("bookIdList").split(",")));
+                            if (currentBookList.get(0).equals("")) {
+                                currentBookList.set(0, checkOutId);
+                            } else {
+                                currentBookList.add(checkOutId);
+                            }
+
+                            foundUser.put("bookIdList", String.join(",", currentBookList));
+                            userUpdater.updateUser(SignedInUser.getId(), foundUser);
+
+                            temporary.printUsers();
+                        }
+
                     } else {
                         userInput.printMessage("Book with given id not found\n");
                     }
@@ -72,7 +101,23 @@ public class UserCommands implements MenuPrintOptions {
                     String returnId = userInput.getStringInput("Enter the id of the book to return:");
                     Optional<JSONObject> returnedBook = bookSearch.findBookById(returnId);
                     if (returnedBook.isPresent()) {
-                        userInput.printMessage(bookLoaner.returnBook(returnId));
+                        Optional<Map<String, String>> currentUser = userSearch.searchById(SignedInUser.getId());
+                        if (currentUser.isPresent()) {
+                            Map<String, String> foundUser = currentUser.get();
+                            List<String> currentBookList = new ArrayList<>(Arrays.asList(foundUser.get("bookIdList").split(",")));
+
+                            if (currentBookList.contains(returnId)) {
+                                currentBookList.remove(returnId);
+                                foundUser.put("bookIdList", String.join(",", currentBookList));
+                                userUpdater.updateUser(SignedInUser.getId(), foundUser);
+
+                                userInput.printMessage(bookLoaner.returnBook(returnId));
+                            } else {
+                                userInput.printMessage("You are not the person loaning this book\n");
+                            }
+
+                            temporary.printUsers();
+                        }
                     } else {
                         userInput.printMessage("Book with given id not found\n");
                     }

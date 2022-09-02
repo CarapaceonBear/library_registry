@@ -1,20 +1,27 @@
 package User;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class UserImporter implements User.Importer {
 
-    private final double importingId;
+    private final String importingId;
     private final String importingName;
     private final String importingPassword;
+    private final List<String> importingBookIdList;
 
-    public UserImporter(double id, String name, String password) {
+    public UserImporter(String id, String name, String password, String bookIdList) {
         this.importingId = id;
         this.importingName = name;
         this.importingPassword = password;
+        this.importingBookIdList = Arrays.asList(bookIdList.split(","));
     }
 
-    public double fetchId() { return importingId; }
+    public String fetchId() { return importingId; }
 
     public String fetchName() { return importingName; }
 
     public String fetchPassword() { return importingPassword; }
+
+    public List<String> fetchBookIdList() { return importingBookIdList; }
 }

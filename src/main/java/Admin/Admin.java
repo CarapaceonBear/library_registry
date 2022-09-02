@@ -2,14 +2,14 @@ package Admin;
 
 public class Admin {
 
-    private double id;
+    private String id;
     private String name;
     private String password;
 
     public Admin() {}
 
     interface Importer {
-        double fetchId();
+        String fetchId();
         String fetchName();
         String fetchPassword();
     }
@@ -20,7 +20,7 @@ public class Admin {
     }
 
     interface Exporter {
-        void storeId(double id);
+        void storeId(String id);
         void storeName(String name);
         void storePassword(String password);
     }

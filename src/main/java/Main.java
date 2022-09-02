@@ -28,9 +28,7 @@
 // LibraryJSONExporter o
 // ReportHandler o
 // ReportRequester o
-// CheckingHandler o
-// CheckoutRequester o
-// ReturnRequester o
+// UserBookListModifier o
 // IdGenerator x
 // JsonToBookListCompiler x
 // CsvToJsonConverter x

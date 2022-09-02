@@ -16,7 +16,7 @@ public class AdminRegistry implements AdminRegistrySearch, AdminRegistryAddAdmin
         this.idGenerator = idGenerator;
     }
 
-    private void createAdmin(double id, String name, String password) {
+    private void createAdmin(String id, String name, String password) {
         AdminImporter importer = new AdminImporter(id, name, password);
         Admin newAdmin = new Admin(importer);
 
