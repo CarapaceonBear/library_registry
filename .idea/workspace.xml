@@ -4,31 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bfff40e0-4bf1-4f93-8ed6-b46a13039ead" name="Changes" comment="major refactor, loaning now updates user. More fixes required">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Book/BookLoaner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Book/BookLoaner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Book/BookRegistry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Book/BookRegistry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Book/BookRegistryLoan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Book/BookRegistryLoan.java" afterDir="false" />
+    <list default="true" id="bfff40e0-4bf1-4f93-8ed6-b46a13039ead" name="Changes" comment="loaning fix">
       <change beforePath="$PROJECT_DIR$/src/main/java/Commands/UserCommands.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Commands/UserCommands.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Admin/Admin$Exporter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Admin/Admin$Exporter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Admin/Admin$Importer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Admin/Admin$Importer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Admin/Admin.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Admin/Admin.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Admin/AdminExporter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Admin/AdminExporter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Admin/AdminImporter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Admin/AdminImporter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Admin/AdminRegistry.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Admin/AdminRegistry.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Commands/SignInCommands.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Commands/SignInCommands.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Commands/UserCommands.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Commands/UserCommands.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/EnvironmentSetup.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/EnvironmentSetup.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/User/User$Exporter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/User/User$Exporter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/User/User$Importer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/User/User$Importer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/User/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/User/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/User/UserExporter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/User/UserExporter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/User/UserImporter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/User/UserImporter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/User/UserRegistry.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/User/UserRegistry.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/User/UserRegistrySearch.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/User/UserRegistrySearch.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Utilities/IdGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Utilities/IdGenerator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Utilities/SignedInUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Utilities/SignedInUser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Book/BookLoaner.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Book/BookLoaner.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Book/BookRegistry.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Book/BookRegistry.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Book/BookRegistryLoan.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Book/BookRegistryLoan.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -198,7 +179,14 @@
       <option name="project" value="LOCAL" />
       <updated>1662127241467</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="loaning fix">
+      <created>1662462036834</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1662462036835</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -229,6 +217,7 @@
     <MESSAGE value="books can be checked out" />
     <MESSAGE value="books returning" />
     <MESSAGE value="major refactor, loaning now updates user. More fixes required" />
-    <option name="LAST_COMMIT_MESSAGE" value="major refactor, loaning now updates user. More fixes required" />
+    <MESSAGE value="loaning fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="loaning fix" />
   </component>
 </project>

@@ -16,7 +16,7 @@ public class UserCommands implements MenuPrintOptions {
 
     private final UserInput userInput;
     private final BookListPrinter printer;
-    private final String[] menuOptions = {"Search for a book", "Get full details of a book", "Check out a book", "Return a book"};
+    private final String[] menuOptions = {"Search for a book", "Get full details of a book", "Check out a book", "Return a book", "List my loaned books"};
     private BookRegistrySearch bookSearch;
     private UserRegistrySearch userSearch;
     private BookRegistryLoan bookLoaner;
@@ -63,6 +63,9 @@ public class UserCommands implements MenuPrintOptions {
                     break;
                 case 4:
                     returnBook();
+                    break;
+                case 5:
+                    listLoanedBooks();
                     break;
                 default:
                     isActive = false;
@@ -141,6 +144,23 @@ public class UserCommands implements MenuPrintOptions {
             }
         } else {
             userInput.printMessage("Book with given id not found\n");
+        }
+    }
+
+    private void listLoanedBooks() {
+        Optional<Map<String, String>> currentUser = userSearch.searchById(SignedInUser.getId());
+        if (currentUser.isPresent()) {
+            Map<String, String> foundUser = currentUser.get();
+            List<String> currentBookList = new ArrayList<>(Arrays.asList(foundUser.get("bookIdList").split(",")));
+            if (currentBookList.size() > 0) {
+                for (String id : currentBookList) {
+                    JSONObject foundBook = bookSearch.findBookById(id).get();
+                    userInput.printMessage(id + " - " + foundBook.getString("Title"));
+                }
+                userInput.printMessage("");
+            } else {
+                userInput.printMessage("No books currently on loan\n");
+            }
         }
     }
 }
