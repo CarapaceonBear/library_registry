@@ -49,6 +49,14 @@ public class BookRegistry implements BookRegistrySearch, BookRegistryLoan {
                 .collect(Collectors.toList());
     }
 
+    public boolean isBookInLibrary(String id) {
+        return loaner.isBookInLibrary(library, id);
+    }
+
+    public boolean isBookOnLoan(String id) {
+        return loaner.isBookOnLoan(library, id);
+    }
+
     public String checkOutBook(String id) {
         return loaner.checkOutBook(library, id);
     }

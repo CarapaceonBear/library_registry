@@ -35,8 +35,9 @@
 // EnvironmentSetup x
 
 // to do:
-//  modify users book list when loaning
 //  update library file on shutdown
+//  save and load users/admins,
+//  need idGenerator to find the latest id on start
 
 public class Main {
     public static void main(String[] args) {

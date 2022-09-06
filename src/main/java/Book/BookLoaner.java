@@ -6,6 +6,32 @@ import java.util.List;
 
 public class BookLoaner {
 
+    public boolean isBookInLibrary(List<Book> library, String id) {
+        for (Book book : library) {
+            BookJsonExporter exporter = new BookJsonExporter();
+            book.export(exporter);
+            JSONObject exportedBook = exporter.exportData();
+
+            if (exportedBook.getString("Number").equals(id)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public boolean isBookOnLoan(List<Book> library, String id) {
+        for (Book book : library) {
+            BookJsonExporter exporter = new BookJsonExporter();
+            book.export(exporter);
+            JSONObject exportedBook = exporter.exportData();
+
+            if (exportedBook.getString("Number").equals(id)) {
+                return !exportedBook.getString("IsOnLoan").equals("false");
+            }
+        }
+        throw new IllegalArgumentException("ID not in library, check this first");
+    }
+
     public String checkOutBook(List<Book> library, String id) {
         for (int i = 0; i < library.size(); i++) {
             BookJsonExporter exporter = new BookJsonExporter();
